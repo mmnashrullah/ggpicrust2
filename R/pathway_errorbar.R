@@ -586,7 +586,7 @@ pathway_errorbar <-
     daa_results_filtered_sub_df$unique <-
       nrow(daa_results_filtered_sub_df) - seq_len(nrow(daa_results_filtered_sub_df)) + 1
     daa_results_filtered_sub_df$p_adjust <-
-      substr(daa_results_filtered_sub_df$p_adjust, 1, 5)
+      substr(daa_results_filtered_sub_df$p_adjust, 1, 10)
     p_annotation <- daa_results_filtered_sub_df %>%
       ggplot2::ggplot(ggplot2::aes(group_nonsense, p_adjust)) +
       ggplot2::geom_text(
